@@ -6,11 +6,11 @@
 Aplikacja jest prostą stroną internetową uruchamianą w kontenerze Docker, która wyświetla podstawowe informacje o serwerze, takie jak adres IP, hostname oraz wersja aplikacji. W pierwszym etapie budowania obrazu wykorzystano minimalny system plików Alpine dostarczony w postaci archiwum `.tar`, które zostało rozpakowane na obrazie bazowym `scratch`. Następnie gotowa strona jest kopiowana do kontenera z serwerem Nginx, który udostępnia ją w przeglądarce.
 
 
-## Budowa obrazu 
+## Polecenie - Budowa obrazu 
 docker build --build-arg VERSION=2.5.0 -t lab5-app .
 ![Zrzut ekranu z budowania](build.png)
 
-## Uruchomienie serwera
+## Polecenie - Uruchomienie serwera
 docker run -d -p 8080:80 --name moj_serwer lab5-app
 
 
