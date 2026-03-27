@@ -3,7 +3,8 @@
 ## Autor - Kinga Kowalska
 
 ## Opis 
-Obraz Docker
+Aplikacja jest prostą stroną internetową uruchamianą w kontenerze Docker, która wyświetla podstawowe informacje o serwerze, takie jak adres IP, hostname oraz wersja aplikacji. W pierwszym etapie budowania obrazu wykorzystano minimalny system plików Alpine dostarczony w postaci archiwum `.tar`, które zostało rozpakowane na obrazie bazowym `scratch`. Następnie gotowa strona jest kopiowana do kontenera z serwerem Nginx, który udostępnia ją w przeglądarce.
+
 
 ## Budowa obrazu 
 docker build --build-arg VERSION=2.5.0 -t lab5-app .
